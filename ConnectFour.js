@@ -51,16 +51,16 @@ function checkWinnerHorizontal(board, player) {
     let count = 0
     for (let i = 0; i < board.length; i++) {
         count = 0
-        for (let j = 0; j < board[i].length; j++) {
+        for (let j = 0; j < board[0].length; j++) {
             if (board[i][j] === player) {
                 count += 1;
             } else {
                 count = 0;
             }
-        }
-        if (count >= 4) {
-            winner(player);
-            break;
+            if (count >= 4) {
+                winner(player);
+                break;
+            }
         }
     }
 }
@@ -140,15 +140,15 @@ function checkWinnerDiagonalAsc(board, player) {
 
 function checkWinner(board, player) {
     checkWinnerHorizontal(board, player);
-    if (winnerExist === false) {
-        checkWinnerVertical(board, player);
-        if (winnerExist === false) {
-            checkWinnerDiagonalDesc(board, player);
-            if (winnerExist === false) {
-                checkWinnerDiagonalAsc(board, player);
-            }
-        }
-    }
+    // if (!winnerExist) {
+    //     checkWinnerVertical(board, player);
+    //     if (!winnerExist) {
+    //         checkWinnerDiagonalDesc(board, player);
+    //         if (!winnerExist) {
+    //             checkWinnerDiagonalAsc(board, player);
+    //         }
+    //     }
+    // }
 }
 
 // **************************************************************************
@@ -168,14 +168,14 @@ function winner(player) {
     console.log(`     ____________
     '._========_.'
     .-|:       |-.
-   |( |.       |) |
+   |( |.       | )|
     '-|:.      |-'
-      :::.    /
+      ':::.   /
        ':::..'
-         ) (
-       _.' '._
-    |"""""""""""|  
-    """""""""""""`);
+         )  (
+       _.'  '._
+    |""""""""""""|  
+    """"""""""""""`);
 }
 
 
