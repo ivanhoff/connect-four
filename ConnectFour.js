@@ -140,26 +140,18 @@ function checkWinnerDiagonalAsc(board, player) {
 
 function checkWinner(board, player) {
     checkWinnerHorizontal(board, player);
-    // if (!winnerExist) {
-    //     checkWinnerVertical(board, player);
-    //     if (!winnerExist) {
-    //         checkWinnerDiagonalDesc(board, player);
-    //         if (!winnerExist) {
-    //             checkWinnerDiagonalAsc(board, player);
-    //         }
-    //     }
-    // }
+     if (!winnerExist) {
+         checkWinnerVertical(board, player);
+         if (!winnerExist) {
+             checkWinnerDiagonalDesc(board, player);
+             if (!winnerExist) {
+                 checkWinnerDiagonalAsc(board, player);
+             }
+         }
+     }
 }
 
 // **************************************************************************
-
-function winnerCondition(board, player) {
-    if (board[i][j] === player) {
-        count += 1;
-    } else {
-        count = 0;
-    }
-}
 
 
 function winner(player) {
@@ -199,17 +191,5 @@ function startGame() {
     readyPlayer(board, players[0].number);
 }
 
-
 ///// START GAME \\\\\
 startGame();
-
-// const matrix1 = [
-//     [0, 0, 2, 0, 0, 0, 0],
-//     [0, 0, 2, 2, 0, 1, 0],
-//     [2, 0, 1, 0, 1, 0, 2],
-//     [0, 0, 1, 1, 1, 2, 0],
-//     [0, 0, 1, 0, 0, 0, 0],
-//     [0, 0, 2, 2, 0, 1, 0]
-// ]
-
-// checkWinner(matrix1, players[0].number);
