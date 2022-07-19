@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658203134515" clover="3.2.0">
-  <project timestamp="1658203134515" name="All files">
+<coverage generated="1658204611039" clover="3.2.0">
+  <project timestamp="1658204611039" name="All files">
     <metrics statements="123" coveredstatements="72" conditionals="60" coveredconditionals="27" methods="12" coveredmethods="8" elements="195" coveredelements="107" complexity="0" loc="123" ncloc="123" packages="1" files="1" classes="1"/>
     <file name="utils.js" path="/Users/ivan/Documents/Code/Connect Four Proyect/ConnectFour V1.1/utils.js">
       <metrics statements="123" coveredstatements="72" conditionals="60" coveredconditionals="27" methods="12" coveredmethods="8"/>

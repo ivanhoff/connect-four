@@ -46,15 +46,15 @@ function readyPlayer(board, player) {
 
 /* ---------------------------------- Turns --------------------------------- */
 function nextTurn(board) {
-    if (board[0].indexOf(0) == -1 && winnerExist.value === false) {
+    if (board[0].indexOf(0) == -1 && !winnerExist.value) {
         winnerExist.value = undefined;
         console.log('--------------> D R A W <--------------');
         console.log('---------> G A M E   O V E R <---------');
         console.log('\n\n');
     } else {
-        if (turn % 2 == 0 && winnerExist.value === false) {
+        if (turn % 2 == 0 && !winnerExist.value) {
             readyPlayer(board, players[1].number);
-        } else if (winnerExist.value === false) {
+        } else if (!winnerExist.value) {
             readyPlayer(board, players[0].number);
         }
     }
