@@ -6,10 +6,12 @@
 -  node v16 installed.
 
 ### Instructions:
-- Clone repository https://github.com/lvanm/ConnectFour.git
-- Open terminal at repository directory
-- npm install
-- run ConnectFour.js with node
+```
+git clone https://github.com/lvanm/ConnectFour.git
+cd ConnectFour/
+npm install
+npm start
+```
 - Enjoy!
 
 
