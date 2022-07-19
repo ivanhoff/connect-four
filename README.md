@@ -8,7 +8,7 @@
 ### Instructions:
 ```
 git clone https://github.com/imarienhoff/connect-four.git
-cd ConnectFour/
+cd connect-four/
 npm install
 npm start
 ```
