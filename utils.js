@@ -11,6 +11,19 @@ const players = [
 let turn = 1;
 let winnerExist = {value: false};
 
+/* ------------------------------ Game Starter ------------------------------ */
+function createEmptyBoard(x, y) {
+    const board = Array(y).fill(null).map(() => Array(x).fill(0));
+    return board;
+}
+
+function startGame() {
+    const board = createEmptyBoard(7, 6);
+    console.clear();
+    console.table(board);
+    readyPlayer(board, players[0].number);
+}
+
 /* ----------------------------- Players Inputs ----------------------------- */
 function readyPlayer(board, player) {
     let invalidValue = true;
@@ -58,19 +71,6 @@ function nextTurn(board) {
             readyPlayer(board, players[0].number);
         }
     }
-}
-
-/* ------------------------------ Game Starter ------------------------------ */
-function createEmptyBoard(x, y) {
-    const board = Array(y).fill(null).map(() => Array(x).fill(0));
-    return board;
-}
-
-function startGame() {
-    const board = createEmptyBoard(7, 6);
-    console.clear();
-    console.table(board);
-    readyPlayer(board, players[0].number);
 }
 
 /* ------------------------------ Winner Check ------------------------------ */

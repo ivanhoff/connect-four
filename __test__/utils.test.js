@@ -1,4 +1,4 @@
-const { readyPlayer, createEmptyBoard, nextTurn, checkWinnerHorizontal, checkWinnerVertical, checkWinnerDiagonalDesc, checkWinnerDiagonalAsc, winnerExist, startGame } = require('../utils');
+const { createEmptyBoard, nextTurn, checkWinnerHorizontal, checkWinnerVertical, checkWinnerDiagonalDesc, checkWinnerDiagonalAsc, winnerExist } = require('../utils');
 
 beforeEach(() => {
     winnerExist.value = false;
